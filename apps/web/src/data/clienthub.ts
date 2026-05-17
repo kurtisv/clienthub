@@ -2,8 +2,8 @@ export const projects = [
   {
     id: "ch-project-001",
     slug: "studio-moreau-rebrand",
-    name: "Studio Moreau Creative Workspace",
-    client: "Studio Moreau",
+    name: "Projet recu Creative Workspace",
+    client: "Projet recu",
     status: "IN_REVIEW",
     progress: 82,
     budgetCents: 2400000,
@@ -24,7 +24,7 @@ export const projects = [
     files: ["QP-2026-014-approved.pdf", "ReserveFlow-call-notes.md", "CommerceKit-order-CK-2026-0001.pdf", "Launch checklist.md"],
     messages: [
       { author: "Kurtis", body: "The approved quote, booking notes, and launch kit order are now attached to this workspace." },
-      { author: "Camille Moreau", body: "The connected view keeps the handoff tied to the original inquiry." },
+      { author: "Client recu", body: "The connected view keeps the handoff tied to the original inquiry." },
     ],
   },
   {
@@ -65,9 +65,9 @@ export const portalStats = [
 ];
 
 export const ecosystemHandoffs = [
-  { module: "Luma Studio", signal: "Initial request", owner: "Camille Moreau" },
-  { module: "QuotePilot", signal: "Approved proposal", owner: "Studio Moreau" },
-  { module: "ReserveFlow", signal: "Discovery and workshop bookings", owner: "Camille Moreau / Elliot Moore" },
+  { module: "Luma Studio", signal: "Initial request", owner: "Client recu" },
+  { module: "QuotePilot", signal: "Approved proposal", owner: "Projet recu" },
+  { module: "ReserveFlow", signal: "Discovery and workshop bookings", owner: "Client recu / Elliot Moore" },
   { module: "CommerceKit", signal: "Launch kit and event materials", owner: "Operations" },
   { module: "EventPass", signal: "Founder Summit and Design Ops Night", owner: "Events" },
   { module: "SupportDesk Lite", signal: "Post-delivery follow-up", owner: "Support" },

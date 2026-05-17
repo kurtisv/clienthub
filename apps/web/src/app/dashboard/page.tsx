@@ -69,7 +69,7 @@ export default async function DashboardPage() {
                       <span className="border bg-background px-2 py-1 text-xs font-semibold">{event.sourceApp}</span>
                       <span className="font-mono text-xs text-muted-foreground">{event.flowId}</span>
                     </div>
-                    <h3 className="mt-3 font-semibold">{event.customerName ?? "Client ecosysteme"}</h3>
+                    <h3 className="mt-3 font-semibold">{event.customerName ?? "Nom recu du formulaire"}</h3>
                     <p className="mt-1 text-sm text-muted-foreground">{event.title}</p>
                     <p className="mt-2 text-sm text-muted-foreground">
                       Soumission {String(payload.quoteNumber ?? "-")} · Consultant {String(payload.consultantName ?? "-")}

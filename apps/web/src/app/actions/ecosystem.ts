@@ -31,7 +31,7 @@ export async function createProjectFromEcosystemEvent(formData: FormData) {
   if (!event) return;
 
   const payload = payloadOf(event.payload);
-  const customerName = event.customerName || text(payload.customerName) || "Client ecosysteme";
+  const customerName = event.customerName || text(payload.customerName) || text(payload.name) || "Nom recu du formulaire";
   const customerEmail = event.customerEmail || text(payload.customerEmail) || undefined;
   const projectName =
     text(payload.projectName) ||
