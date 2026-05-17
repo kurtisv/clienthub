@@ -1,16 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --card: #ffffff;
-  --muted: #f4f4f5;
-  --muted-foreground: #52525b;
-  --border: #e4e4e7;
-  --primary: #18181b;
+  --background: #f6f5f0;
+  --foreground: #18212a;
+  --card: #fffefa;
+  --muted: #e8ebe4;
+  --muted-foreground: #66727a;
+  --border: #d6d6c9;
+  --primary: #273c57;
   --primary-foreground: #fafafa;
-  --secondary: #f4f4f5;
-  --secondary-foreground: #18181b;
+  --secondary: #dbe7d3;
+  --secondary-foreground: #1d2a21;
+  --accent: #b95738;
+  --accent-soft: #f4d8c9;
 }
 
 @theme inline {
@@ -24,26 +26,33 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --card: #111113;
-    --muted: #1f1f23;
-    --muted-foreground: #a1a1aa;
-    --border: #27272a;
-    --primary: #fafafa;
-    --primary-foreground: #18181b;
-    --secondary: #27272a;
-    --secondary-foreground: #fafafa;
-  }
+body {
+  background:
+    radial-gradient(circle at 18% 12%, rgba(185, 87, 56, 0.16), transparent 28rem),
+    linear-gradient(180deg, rgba(219, 231, 211, 0.58), rgba(246, 245, 240, 0.96) 32rem),
+    var(--background);
+  color: var(--foreground);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
+.clienthub-grid {
+  background:
+    linear-gradient(rgba(39, 60, 87, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(39, 60, 87, 0.07) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.clienthub-lift {
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.clienthub-lift:hover {
+  transform: translateY(-3px);
+  border-color: rgba(39, 60, 87, 0.45);
+  box-shadow: 0 16px 30px rgba(39, 60, 87, 0.11);
 }

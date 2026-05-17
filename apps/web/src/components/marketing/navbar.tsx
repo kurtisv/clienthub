@@ -1,33 +1,54 @@
 import Link from "next/link";
 
+import { LanguageSwitcher } from "@/components/language-switcher";
 import { Button } from "@/components/ui/button";
+import { getCurrentLocale } from "@/lib/locale";
 
-const navItems = [
-  { href: "/services", label: "Services" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/booking", label: "Booking" },
-  { href: "/developers", label: "API" },
-  { href: "/docs", label: "Docs" },
-  { href: "/contact", label: "Contact" },
-];
+const copy = {
+  fr: {
+    nav: [
+      { href: "/portal", label: "Portail" },
+      { href: "/portal/projects", label: "Projets" },
+      { href: "/case-study", label: "Etude" },
+      { href: "/contact", label: "Contact" },
+    ],
+    cta: "Ouvrir le portail",
+  },
+  en: {
+    nav: [
+      { href: "/portal", label: "Portal" },
+      { href: "/portal/projects", label: "Projects" },
+      { href: "/case-study", label: "Case study" },
+      { href: "/contact", label: "Contact" },
+    ],
+    cta: "Open portal",
+  },
+};
 
-export function Navbar() {
+export async function Navbar() {
+  const locale = await getCurrentLocale();
+  const t = copy[locale];
+
   return (
-    <header className="border-b bg-background">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <Link href="/" className="text-base font-semibold">
-          KV Web Starter
+    <header className="border-b bg-card/90 backdrop-blur">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
+        <Link href="/" className="flex items-center gap-2 text-base font-semibold">
+          <span className="size-3 rounded-sm bg-[var(--accent)]" />
+          ClientHub
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
-          {navItems.map((item) => (
+          {t.nav.map((item) => (
             <Link key={item.href} href={item.href} className="text-sm text-muted-foreground hover:text-foreground">
               {item.label}
             </Link>
           ))}
         </nav>
-        <Button asChild size="sm">
-          <Link href="/login">Dashboard</Link>
-        </Button>
+        <div className="flex items-center gap-2">
+          <LanguageSwitcher current={locale} />
+          <Button asChild size="sm">
+            <Link href="/portal">{t.cta}</Link>
+          </Button>
+        </div>
       </div>
     </header>
   );

@@ -207,6 +207,55 @@ model AuditLog {
   createdAt DateTime @default(now())
 }
 
+model ClientHubProject {
+  id          String                 @id @default(cuid())
+  slug        String                 @unique
+  name        String
+  clientName  String
+  status      ClientHubProjectStatus @default(ACTIVE)
+  progress    Int                    @default(0)
+  budgetCents Int?
+  nextStep    String?
+  dueDate     DateTime?
+  accent      String?
+  milestones  ClientHubMilestone[]
+  files       ClientHubFile[]
+  messages    ClientHubMessage[]
+  createdAt   DateTime               @default(now())
+  updatedAt   DateTime               @updatedAt
+
+  @@index([status])
+}
+
+model ClientHubMilestone {
+  id        String   @id @default(cuid())
+  projectId String
+  title     String
+  status    String
+  dueDate   DateTime?
+  project   ClientHubProject @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+}
+
+model ClientHubFile {
+  id        String   @id @default(cuid())
+  projectId String
+  name      String
+  kind      String?
+  url       String?
+  project   ClientHubProject @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+}
+
+model ClientHubMessage {
+  id        String   @id @default(cuid())
+  projectId String
+  author    String
+  body      String
+  project   ClientHubProject @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+}
+
 enum Role {
   ADMIN
   OWNER
@@ -235,4 +284,11 @@ enum Plan {
   PRO
   BUSINESS
   ENTERPRISE
+}
+
+enum ClientHubProjectStatus {
+  ACTIVE
+  IN_REVIEW
+  PAUSED
+  COMPLETE
 }
