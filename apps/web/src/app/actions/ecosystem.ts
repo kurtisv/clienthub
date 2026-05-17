@@ -141,6 +141,64 @@ export async function createProjectFromEcosystemEvent(formData: FormData) {
     actionUrl: `/dashboard/projects/${project.slug}`,
   });
 
+  const downstreamEvent = {
+    flowId: event.flowId,
+    sourceApp: "clienthub",
+    eventType: "project.created",
+    entityType: "project",
+    entityId: project.id,
+    customerName,
+    customerEmail,
+    title: "Projet ClientHub cree depuis le parcours reel",
+    description: `${customerName} est maintenant centralise dans ClientHub pour ${project.name}.`,
+    payload: {
+      projectId: project.id,
+      projectName: project.name,
+      quoteNumber,
+      quoteTotalCents,
+      consultantName,
+      bookingNotes,
+      sourceApp: event.sourceApp,
+      sourceEventId: event.id,
+      flowId: event.flowId,
+    },
+    priority: "NORMAL",
+  };
+
+  await Promise.all([
+    sendEcosystemHandoff(process.env.COMMERCEKIT_INGEST_URL ?? "https://commercekit.vercel.app/api/ecosystem/ingest", {
+      ...downstreamEvent,
+      actionLabel: "Creer la commande CommerceKit",
+      actionUrl: "/dashboard",
+    }),
+    sendEcosystemHandoff(process.env.EVENTPASS_INGEST_URL ?? "https://eventpass-nine.vercel.app/api/ecosystem/ingest", {
+      ...downstreamEvent,
+      actionLabel: "Creer le billet EventPass",
+      actionUrl: "/dashboard",
+    }),
+    sendEcosystemHandoff(process.env.SUPPORTDESK_INGEST_URL ?? "https://supportdesk-lite-jet.vercel.app/api/ecosystem/ingest", {
+      ...downstreamEvent,
+      actionLabel: "Creer le ticket SupportDesk",
+      actionUrl: "/dashboard",
+    }),
+    sendEcosystemHandoff(process.env.API_METER_INGEST_URL ?? "https://api-meter.vercel.app/api/ecosystem/ingest", downstreamEvent),
+  ]);
+
   revalidatePath("/dashboard");
   redirect(`/dashboard?projectCreated=${project.id}`);
+}
+
+async function sendEcosystemHandoff(url: string, body: Record<string, unknown>) {
+  if (!body.flowId) return;
+
+  try {
+    await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+      cache: "no-store",
+    });
+  } catch (error) {
+    console.error("Ecosystem handoff failed", error);
+  }
 }
