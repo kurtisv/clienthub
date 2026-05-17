@@ -3,7 +3,7 @@ import { ArrowRight, Files, MessageSquareText, Milestone } from "lucide-react";
 
 import { MarketingPageShell } from "@/components/marketing/page-shell";
 import { Button } from "@/components/ui/button";
-import { portalStats, projects } from "@/data/clienthub";
+import { ecosystemHandoffs, portalStats, projects } from "@/data/clienthub";
 import { getCurrentLocale } from "@/lib/locale";
 
 export default async function PortalPage() {
@@ -69,6 +69,22 @@ export default async function PortalPage() {
             ))}
           </section>
         </div>
+        <section className="mt-8 rounded-lg border bg-card p-5">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
+            KV Portfolio handoffs
+          </p>
+          <h2 className="mt-3 text-2xl font-semibold">
+            {locale === "fr" ? "Les donnees client viennent de plusieurs modules." : "Client data arrives from several modules."}
+          </h2>
+          <div className="mt-5 grid gap-3 md:grid-cols-2">
+            {ecosystemHandoffs.map((handoff) => (
+              <div key={handoff.module} className="rounded-md border bg-background p-4">
+                <p className="font-semibold">{handoff.module}</p>
+                <p className="mt-1 text-sm text-muted-foreground">{handoff.signal}</p>
+              </div>
+            ))}
+          </div>
+        </section>
       </main>
     </MarketingPageShell>
   );

@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle2, Files, MessageSquareText, Milestone, ShieldCh
 
 import { MarketingPageShell } from "@/components/marketing/page-shell";
 import { Button } from "@/components/ui/button";
-import { portalStats, projects } from "@/data/clienthub";
+import { ecosystemHandoffs, portalStats, projects } from "@/data/clienthub";
 import { getCurrentLocale } from "@/lib/locale";
 
 const copy = {
@@ -21,6 +21,9 @@ const copy = {
       { title: "Messages", text: "Fil de discussion simple pour garder le contexte au meme endroit.", icon: MessageSquareText },
       { title: "Confiance", text: "Base Auth.js/Prisma prete pour portail protege et acces client.", icon: ShieldCheck },
     ],
+    ecosystemTitle: "Le portail rassemble les signaux des autres modules.",
+    ecosystemText:
+      "ClientHub devient le dossier client central: devis QuotePilot, rendez-vous ReserveFlow, achats CommerceKit, inscriptions EventPass et suivi SupportDesk restent visibles au meme endroit.",
   },
   en: {
     eyebrow: "Project 7 - Client portal",
@@ -36,6 +39,9 @@ const copy = {
       { title: "Messages", text: "Simple message thread to keep context in one place.", icon: MessageSquareText },
       { title: "Trust", text: "Auth.js/Prisma foundation ready for protected client access.", icon: ShieldCheck },
     ],
+    ecosystemTitle: "The portal gathers signals from the other modules.",
+    ecosystemText:
+      "ClientHub becomes the central client record: QuotePilot proposals, ReserveFlow appointments, CommerceKit purchases, EventPass registrations, and SupportDesk follow-up stay visible in one place.",
   },
 };
 
@@ -116,6 +122,28 @@ export default async function Home() {
               <p className="mt-2 text-sm leading-6 text-muted-foreground">{module.text}</p>
             </div>
           ))}
+        </section>
+        <section className="border-y bg-primary text-primary-foreground">
+          <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 lg:grid-cols-[0.82fr_1.18fr]">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-secondary">
+                KV Portfolio ecosystem
+              </p>
+              <h2 className="mt-4 text-3xl font-semibold tracking-normal text-balance sm:text-5xl">
+                {t.ecosystemTitle}
+              </h2>
+              <p className="mt-5 text-lg leading-8 text-primary-foreground/75">{t.ecosystemText}</p>
+            </div>
+            <div className="grid gap-3">
+              {ecosystemHandoffs.map((handoff) => (
+                <div key={handoff.module} className="grid gap-3 rounded-lg border border-white/15 bg-white/[0.06] p-4 sm:grid-cols-[0.7fr_1fr_auto]">
+                  <p className="font-semibold">{handoff.module}</p>
+                  <p className="text-sm text-primary-foreground/72">{handoff.signal}</p>
+                  <p className="text-sm font-medium text-secondary">{handoff.owner}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </section>
       </main>
     </MarketingPageShell>
