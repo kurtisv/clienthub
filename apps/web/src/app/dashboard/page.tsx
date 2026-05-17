@@ -1,4 +1,5 @@
 import { EcosystemNotificationPanel } from "@/components/ecosystem/notification-panel";
+import { createProjectFromEcosystemEvent } from "@/app/actions/ecosystem";
 import { getIncomingEcosystemEvents } from "@/lib/ecosystem";
 
 const stats = [
@@ -47,7 +48,7 @@ export default async function DashboardPage() {
                 ? event.payload as Record<string, unknown>
                 : {};
               return (
-                <article key={event.id} className="grid gap-3 p-5 md:grid-cols-[1fr_auto]">
+                <article key={event.id} className="grid gap-4 p-5 md:grid-cols-[1fr_auto]">
                   <div>
                     <div className="flex flex-wrap items-center gap-2">
                       <span className="border bg-background px-2 py-1 text-xs font-semibold">{event.sourceApp}</span>
@@ -59,9 +60,17 @@ export default async function DashboardPage() {
                       Soumission {String(payload.quoteNumber ?? "-")} · Consultant {String(payload.consultantName ?? "-")}
                     </p>
                   </div>
-                  <span className="self-center rounded-full bg-secondary px-3 py-1 text-xs font-semibold">
-                    {event.eventType}
-                  </span>
+                  <div className="flex flex-col items-start gap-3 self-center md:items-end">
+                    <span className="rounded-full bg-secondary px-3 py-1 text-xs font-semibold">
+                      {event.eventType}
+                    </span>
+                    <form action={createProjectFromEcosystemEvent}>
+                      <input type="hidden" name="eventId" value={event.id} />
+                      <button className="border bg-foreground px-3 py-2 text-xs font-semibold text-background hover:opacity-90">
+                        Creer le projet ClientHub
+                      </button>
+                    </form>
+                  </div>
                 </article>
               );
             })}
