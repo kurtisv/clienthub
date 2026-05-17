@@ -1,9 +1,9 @@
 export const projects = [
   {
     id: "ch-project-001",
-    slug: "northline-rebrand",
-    name: "Northline Launch Workspace",
-    client: "Northline Studio",
+    slug: "studio-moreau-rebrand",
+    name: "Studio Moreau Creative Workspace",
+    client: "Studio Moreau",
     status: "IN_REVIEW",
     progress: 82,
     budgetCents: 2400000,
@@ -24,7 +24,7 @@ export const projects = [
     files: ["QP-2026-014-approved.pdf", "ReserveFlow-call-notes.md", "CommerceKit-order-CK-2026-0001.pdf", "Launch checklist.md"],
     messages: [
       { author: "Kurtis", body: "The approved quote, booking notes, and launch kit order are now attached to this workspace." },
-      { author: "Lead Luma entrant", body: "The connected view keeps the handoff tied to the original inquiry." },
+      { author: "Camille Moreau", body: "The connected view keeps the handoff tied to the original inquiry." },
     ],
   },
   {
@@ -65,9 +65,9 @@ export const portalStats = [
 ];
 
 export const ecosystemHandoffs = [
-  { module: "Luma Studio", signal: "Initial request", owner: "Lead Luma entrant" },
-  { module: "QuotePilot", signal: "Approved proposal", owner: "Northline Studio" },
-  { module: "ReserveFlow", signal: "Discovery and workshop bookings", owner: "Lead Luma entrant / Elliot Moore" },
+  { module: "Luma Studio", signal: "Initial request", owner: "Camille Moreau" },
+  { module: "QuotePilot", signal: "Approved proposal", owner: "Studio Moreau" },
+  { module: "ReserveFlow", signal: "Discovery and workshop bookings", owner: "Camille Moreau / Elliot Moore" },
   { module: "CommerceKit", signal: "Launch kit and event materials", owner: "Operations" },
   { module: "EventPass", signal: "Founder Summit and Design Ops Night", owner: "Events" },
   { module: "SupportDesk Lite", signal: "Post-delivery follow-up", owner: "Support" },
