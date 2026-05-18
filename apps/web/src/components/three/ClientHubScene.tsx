@@ -12,7 +12,11 @@ const ClientHubSceneCanvas = dynamic(() => import("./ClientHubSceneCanvas"), {
 
 export function ClientHubScene() {
   return (
-    <ThreeSceneShell label="ClientHub 3D command center" fallback={<ClientHubSceneFallback />}>
+    <ThreeSceneShell
+      label="ClientHub premium client workspace"
+      fallback={<ClientHubSceneFallback />}
+      className="h-[420px] sm:h-[460px] lg:h-[520px]"
+    >
       <ClientHubSceneCanvas />
     </ThreeSceneShell>
   );

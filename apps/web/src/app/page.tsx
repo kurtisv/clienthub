@@ -9,38 +9,38 @@ import { getCurrentLocale } from "@/lib/locale";
 
 const copy = {
   fr: {
-    eyebrow: "Vitrine 3D - Studio portfolio",
-    title: "Une experience client premium avec profondeur, mouvement et preuves visuelles.",
+    eyebrow: "Workspace client 3D",
+    title: "Un portail client centralise mis en scene comme un vrai control center.",
     intro:
-      "ClientHub devient une vitrine moderne inspiree des portfolios pousses: hero immersif, scene 3D CSS, projets selectionnes, preuves de process et parcours clair pour un recruteur.",
+      "ClientHub montre clairement ce qu il fait: projets, fichiers, messages, jalons et decisions convergent dans un workspace client unique, lisible et premium.",
     primary: "Explorer la vitrine",
     secondary: "Voir l'etude",
     sceneLabel: "Studio deck",
-    proofTitle: "Une vitrine plus editoriale, moins dashboard generique.",
+    proofTitle: "Le portail est montre comme une organisation de travail, pas comme un simple dashboard.",
     proof:
-      "Le site presente la capacite a transformer une base Next.js en experience de marque: direction visuelle, systeme de cartes, structure bilingue et sections utiles a une decision rapide.",
+      "Le recruteur comprend immediatement que ClientHub centralise l information client. La scene hero ne montre pas une 3D gadget: elle rend visibles les liens entre projet, fichiers, messages, milestones et modules relies.",
     modules: [
-      { title: "Direction", text: "Hero 3D, composition editoriale et langage visuel propre.", icon: Brush },
-      { title: "Projets", text: "Selection de cas visibles avec statut, progression et prochaine action.", icon: Layers3 },
+      { title: "Direction", text: "Workspace 3D sobre, hierarchie claire et narration B2B premium.", icon: Brush },
+      { title: "Projets", text: "Carte projet centrale avec statut, progression et action attendue.", icon: Layers3 },
       { title: "Preuves", text: "Fichiers, jalons et messages deviennent des signaux de travail reel.", icon: Files },
       { title: "Contact", text: "Navigation courte vers l'etude et les surfaces inspectables.", icon: MessageSquareText },
     ],
     caseTitle: "Trois blocs suffisent pour comprendre la valeur.",
   },
   en: {
-    eyebrow: "3D showcase - Portfolio studio",
-    title: "A premium client experience with depth, motion, and visible proof.",
+    eyebrow: "3D client workspace",
+    title: "A centralized client portal staged like a real control center.",
     intro:
-      "ClientHub is now a modern showcase inspired by advanced portfolios: immersive hero, CSS 3D scene, selected projects, process proof, and a clear recruiter path.",
+      "ClientHub shows exactly what it does: projects, files, messages, milestones, and decisions converge into one readable premium client workspace.",
     primary: "Explore showcase",
     secondary: "View case study",
     sceneLabel: "Studio deck",
-    proofTitle: "A more editorial showcase, less generic dashboard.",
+    proofTitle: "The portal is framed as working organization, not a generic dashboard.",
     proof:
-      "The site shows how a Next.js foundation can become a brand experience: visual direction, card system, bilingual structure, and sections that help a recruiter decide quickly.",
+      "Recruiters can immediately see that ClientHub centralizes client information. The hero scene is not decorative 3D: it makes the relationship between project, files, messages, milestones, and linked modules visible.",
     modules: [
-      { title: "Direction", text: "3D hero, editorial composition, and a distinct visual language.", icon: Brush },
-      { title: "Projects", text: "Selected cases with visible status, progress, and next action.", icon: Layers3 },
+      { title: "Direction", text: "Restrained 3D workspace, clear hierarchy, and a premium B2B language.", icon: Brush },
+      { title: "Projects", text: "A central project card with visible status, progress, and next action.", icon: Layers3 },
       { title: "Proof", text: "Files, milestones, and messages become signals of real work.", icon: Files },
       { title: "Contact", text: "Short navigation toward the case study and inspectable surfaces.", icon: MessageSquareText },
     ],
