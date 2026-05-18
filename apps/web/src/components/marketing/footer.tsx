@@ -10,6 +10,11 @@ const copy = {
       { href: "/portal/projects", label: "Projets" },
       { href: "/case-study", label: "Etude de cas" },
     ],
+    legal: [
+      { href: "/privacy", label: "Confidentialite" },
+      { href: "/terms", label: "Conditions" },
+      { href: "/contact", label: "Contact" },
+    ],
   },
   en: {
     body: "Client portal for agencies and service teams: projects, milestones, files, messages, and invoice placeholders.",
@@ -17,6 +22,11 @@ const copy = {
       { href: "/portal", label: "Portal" },
       { href: "/portal/projects", label: "Projects" },
       { href: "/case-study", label: "Case study" },
+    ],
+    legal: [
+      { href: "/privacy", label: "Privacy" },
+      { href: "/terms", label: "Terms" },
+      { href: "/contact", label: "Contact" },
     ],
   },
 };
@@ -38,9 +48,9 @@ export async function Footer() {
           ))}
         </div>
         <div className="grid gap-2">
-          <Link href="/privacy">Confidentialite</Link>
-          <Link href="/terms">Conditions</Link>
-          <Link href="/contact">Contact</Link>
+          {t.legal.map((item) => (
+            <Link key={item.href} href={item.href}>{item.label}</Link>
+          ))}
         </div>
       </div>
     </footer>

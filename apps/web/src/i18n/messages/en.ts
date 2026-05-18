@@ -1,7 +1,7 @@
 const en = {
   app: {
-    name: "KV Web Starter",
-    tagline: "Premium modular boilerplate for marketing, booking, and SaaS/API projects.",
+    name: "ClientHub",
+    tagline: "Client portal for projects, milestones, files, messages, and handoffs.",
   },
   nav: {
     services: "Services",

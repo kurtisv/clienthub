@@ -1,7 +1,7 @@
 const fr = {
   app: {
-    name: "KV Web Starter",
-    tagline: "Boilerplate modulaire premium pour sites marketing, booking et SaaS/API.",
+    name: "ClientHub",
+    tagline: "Portail client pour projets, jalons, fichiers, messages et transmissions.",
   },
   nav: {
     services: "Services",
@@ -10,7 +10,7 @@ const fr = {
     api: "API",
     docs: "Docs",
     contact: "Contact",
-    dashboard: "Dashboard",
+    dashboard: "Tableau de bord",
   },
   booking: {
     title: "Reservation claire pour services, staff et disponibilites.",
