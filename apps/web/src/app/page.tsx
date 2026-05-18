@@ -9,16 +9,16 @@ import { getCurrentLocale } from "@/lib/locale";
 
 const copy = {
   fr: {
-    eyebrow: "Workspace client 3D",
-    title: "Un portail client centralise mis en scene comme un vrai control center.",
+    eyebrow: "Visuel portail client premium",
+    title: "Un portail client centralise montre comme une surface claire, stable et premium.",
     intro:
-      "ClientHub montre clairement ce qu il fait: projets, fichiers, messages, jalons et decisions convergent dans un workspace client unique, lisible et premium.",
+      "ClientHub montre clairement ce qu il fait: projets, fichiers, messages, jalons et decisions convergent dans un portail client unique, lisible et immediat en screenshot.",
     primary: "Explorer la vitrine",
     secondary: "Voir l'etude",
     sceneLabel: "Studio deck",
-    proofTitle: "Le portail est montre comme une organisation de travail, pas comme un simple dashboard.",
+    proofTitle: "Le hero donne une image de portail client, pas une scene technique surchargee.",
     proof:
-      "Le recruteur comprend immediatement que ClientHub centralise l information client. La scene hero ne montre pas une 3D gadget: elle rend visibles les liens entre projet, fichiers, messages, milestones et modules relies.",
+      "Le recruteur comprend immediatement que ClientHub centralise l information client. Le visuel hero privilegie une carte principale, quelques signaux secondaires lisibles et une hierarchie qui reste claire sur desktop comme sur mobile.",
     modules: [
       { title: "Direction", text: "Workspace 3D sobre, hierarchie claire et narration B2B premium.", icon: Brush },
       { title: "Projets", text: "Carte projet centrale avec statut, progression et action attendue.", icon: Layers3 },
@@ -28,16 +28,16 @@ const copy = {
     caseTitle: "Trois blocs suffisent pour comprendre la valeur.",
   },
   en: {
-    eyebrow: "3D client workspace",
-    title: "A centralized client portal staged like a real control center.",
+    eyebrow: "Premium client portal visual",
+    title: "A centralized client portal shown as a clear, stable, premium surface.",
     intro:
-      "ClientHub shows exactly what it does: projects, files, messages, milestones, and decisions converge into one readable premium client workspace.",
+      "ClientHub shows exactly what it does: projects, files, messages, milestones, and decisions converge into one premium client portal that remains readable even in a single screenshot.",
     primary: "Explore showcase",
     secondary: "View case study",
     sceneLabel: "Studio deck",
-    proofTitle: "The portal is framed as working organization, not a generic dashboard.",
+    proofTitle: "The hero reads as a client portal image, not a crowded technical scene.",
     proof:
-      "Recruiters can immediately see that ClientHub centralizes client information. The hero scene is not decorative 3D: it makes the relationship between project, files, messages, milestones, and linked modules visible.",
+      "Recruiters can immediately see that ClientHub centralizes client information. The hero visual keeps one dominant project surface, a few readable support cues, and a hierarchy that stays clear on desktop and mobile.",
     modules: [
       { title: "Direction", text: "Restrained 3D workspace, clear hierarchy, and a premium B2B language.", icon: Brush },
       { title: "Projects", text: "A central project card with visible status, progress, and next action.", icon: Layers3 },

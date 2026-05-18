@@ -1,0 +1,62 @@
+<svg width="900" height="1200" viewBox="0 0 900 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="80" x2="780" y2="1110" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E1728"/>
+      <stop offset="0.54" stop-color="#13233A"/>
+      <stop offset="1" stop-color="#09111E"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="188" y1="248" x2="718" y2="956" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E6EFF8" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#C6D4E7" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="220" y1="284" x2="682" y2="852" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#15253A"/>
+      <stop offset="1" stop-color="#0F1A29"/>
+    </linearGradient>
+    <filter id="shadow" x="118" y="166" width="664" height="856" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="30"/>
+      <feGaussianBlur stdDeviation="28"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.0117647 0 0 0 0 0.0392157 0 0 0 0 0.0941176 0 0 0 0.44 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_0"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_0" result="shape"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="1200" rx="44" fill="url(#bg)"/>
+  <circle cx="180" cy="178" r="170" fill="#38BDF8" fill-opacity="0.12"/>
+  <circle cx="744" cy="240" r="180" fill="#E2E8F0" fill-opacity="0.08"/>
+
+  <g filter="url(#shadow)">
+    <path d="M190 262L710 228L746 930L216 972L190 262Z" fill="url(#glass)" stroke="#FFFFFF" stroke-opacity="0.18"/>
+    <path d="M224 292L680 264L710 890L246 918L224 292Z" fill="url(#panel)"/>
+    <text x="268" y="350" fill="#9AB4D2" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="600" letter-spacing="4">NORTHLINE WORKSPACE</text>
+    <text x="268" y="414" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="700">Client portal nucleus</text>
+    <text x="268" y="466" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="500">Projects, files, messages, and milestones</text>
+    <text x="268" y="500" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="500">stay centered in one readable workspace.</text>
+
+    <rect x="268" y="550" width="354" height="128" rx="28" fill="#1B2A3C" stroke="#FFFFFF" stroke-opacity="0.08"/>
+    <text x="302" y="594" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="4">FILES</text>
+    <text x="302" y="642" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">Proposal, handoff, assets</text>
+
+    <rect x="268" y="702" width="354" height="128" rx="28" fill="#E7EEF8"/>
+    <text x="302" y="746" fill="#54708D" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="4">MESSAGES</text>
+    <text x="302" y="794" fill="#102033" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">Decision needed</text>
+
+    <rect x="556" y="324" width="118" height="66" rx="22" fill="#0D1726" fill-opacity="0.82" stroke="#7DD3FC" stroke-opacity="0.24"/>
+    <text x="584" y="367" fill="#E0F2FE" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">82%</text>
+
+    <path d="M292 892C292 892 366 870 448 870C530 870 610 894 610 894" stroke="#93C5FD" stroke-opacity="0.22" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="332" cy="892" r="12" fill="#BAE6FD"/>
+    <circle cx="430" cy="878" r="12" fill="#BAE6FD"/>
+    <circle cx="530" cy="882" r="12" fill="#BAE6FD"/>
+    <circle cx="612" cy="894" r="14" fill="#F8FAFC"/>
+    <text x="362" y="946" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600" letter-spacing="3">MILESTONES</text>
+  </g>
+
+  <rect x="116" y="206" width="174" height="58" rx="29" fill="#122132" fill-opacity="0.84" stroke="#7DD3FC" stroke-opacity="0.18"/>
+  <text x="154" y="243" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">QuotePilot</text>
+  <rect x="598" y="1000" width="198" height="58" rx="29" fill="#162436" fill-opacity="0.86" stroke="#A7F3D0" stroke-opacity="0.22"/>
+  <text x="636" y="1037" fill="#ECFDF5" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">SupportDesk</text>
+</svg>

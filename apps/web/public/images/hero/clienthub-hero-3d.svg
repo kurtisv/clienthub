@@ -1,0 +1,92 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="200" y1="120" x2="1340" y2="1040" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="0.52" stop-color="#13233A"/>
+      <stop offset="1" stop-color="#0A1220"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="470" y1="260" x2="1130" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E7EEF8" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#C8D6E7" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="520" y1="310" x2="1110" y2="670" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#15253A"/>
+      <stop offset="1" stop-color="#101B2A"/>
+    </linearGradient>
+    <linearGradient id="softLine" x1="305" y1="426" x2="1304" y2="651" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#93C5FD" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#E2E8F0" stop-opacity="0.08"/>
+    </linearGradient>
+    <filter id="shadow" x="252" y="156" width="1100" height="850" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="34"/>
+      <feGaussianBlur stdDeviation="36"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.0117647 0 0 0 0 0.0392157 0 0 0 0 0.0941176 0 0 0 0.42 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_0"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_0" result="shape"/>
+    </filter>
+    <filter id="chipShadow" x="175" y="236" width="1240" height="702" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feGaussianBlur in="BackgroundImageFix" stdDeviation="10"/>
+      <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_0_0"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_0_0" result="shape"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1200" rx="52" fill="url(#bg)"/>
+  <circle cx="285" cy="215" r="205" fill="#38BDF8" fill-opacity="0.12"/>
+  <circle cx="1278" cy="242" r="248" fill="#E2E8F0" fill-opacity="0.08"/>
+  <circle cx="1322" cy="955" r="220" fill="#60A5FA" fill-opacity="0.08"/>
+
+  <g filter="url(#shadow)">
+    <path d="M470 286L1130 254L1190 744L520 792L470 286Z" fill="url(#glass)" stroke="rgba(255,255,255,0.18)"/>
+    <path d="M520 318L1092 292L1142 704L558 734L520 318Z" fill="url(#panel)"/>
+    <path d="M560 350L1068 326" stroke="#93C5FD" stroke-opacity="0.18" stroke-width="18" stroke-linecap="round"/>
+    <text x="588" y="388" fill="#9AB4D2" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="600" letter-spacing="5">NORTHLINE WORKSPACE</text>
+    <text x="588" y="458" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="700">Client portal nucleus</text>
+    <text x="588" y="520" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500">Files, milestones, messages, and decisions stay attached</text>
+    <text x="588" y="558" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500">to one organized client workspace.</text>
+
+    <rect x="585" y="606" width="258" height="108" rx="28" fill="#1D2A3A" stroke="#FFFFFF" stroke-opacity="0.08"/>
+    <text x="616" y="644" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="4">FILES</text>
+    <text x="616" y="688" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">Proposal, handoff, assets</text>
+
+    <rect x="868" y="606" width="230" height="108" rx="28" fill="#E6EDF7" fill-opacity="0.95"/>
+    <text x="900" y="644" fill="#54708D" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="4">MESSAGES</text>
+    <text x="900" y="688" fill="#142033" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">Decision needed</text>
+
+    <rect x="930" y="354" width="136" height="72" rx="24" fill="#0C1725" fill-opacity="0.78" stroke="#7DD3FC" stroke-opacity="0.24"/>
+    <text x="964" y="401" fill="#E0F2FE" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">82%</text>
+
+    <path d="M603 760C603 760 712 728 816 728C920 728 1036 752 1036 752" stroke="url(#softLine)" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="640" cy="758" r="14" fill="#BAE6FD"/>
+    <circle cx="760" cy="738" r="14" fill="#BAE6FD"/>
+    <circle cx="880" cy="738" r="14" fill="#BAE6FD"/>
+    <circle cx="1000" cy="748" r="16" fill="#F8FAFC"/>
+    <text x="744" y="814" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="600" letter-spacing="3">MILESTONES</text>
+  </g>
+
+  <g filter="url(#chipShadow)">
+    <rect x="252" y="330" width="184" height="68" rx="34" fill="#122132" fill-opacity="0.84" stroke="#7DD3FC" stroke-opacity="0.2"/>
+    <text x="296" y="373" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">QuotePilot</text>
+
+    <rect x="280" y="785" width="196" height="68" rx="34" fill="#122132" fill-opacity="0.84" stroke="#CFE4FF" stroke-opacity="0.2"/>
+    <text x="316" y="828" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">ReserveFlow</text>
+
+    <rect x="1140" y="318" width="204" height="68" rx="34" fill="#172435" fill-opacity="0.86" stroke="#FDE68A" stroke-opacity="0.22"/>
+    <text x="1183" y="361" fill="#FFF7D6" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">CommerceKit</text>
+
+    <rect x="1168" y="760" width="184" height="68" rx="34" fill="#172435" fill-opacity="0.86" stroke="#C4B5FD" stroke-opacity="0.22"/>
+    <text x="1210" y="803" fill="#F3E8FF" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">EventPass</text>
+
+    <rect x="1020" y="882" width="220" height="68" rx="34" fill="#172435" fill-opacity="0.86" stroke="#A7F3D0" stroke-opacity="0.24"/>
+    <text x="1064" y="925" fill="#ECFDF5" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">SupportDesk</text>
+  </g>
+
+  <path d="M436 364L472 374" stroke="#7DD3FC" stroke-opacity="0.26" stroke-width="3" stroke-linecap="round"/>
+  <path d="M476 816L548 770" stroke="#BFDBFE" stroke-opacity="0.22" stroke-width="3" stroke-linecap="round"/>
+  <path d="M1138 350L1120 360" stroke="#FDE68A" stroke-opacity="0.26" stroke-width="3" stroke-linecap="round"/>
+  <path d="M1172 782L1104 754" stroke="#C4B5FD" stroke-opacity="0.24" stroke-width="3" stroke-linecap="round"/>
+  <path d="M1098 900L1046 808" stroke="#A7F3D0" stroke-opacity="0.22" stroke-width="3" stroke-linecap="round"/>
+</svg>
