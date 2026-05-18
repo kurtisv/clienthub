@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { ArrowRight, Brush, CheckCircle2, Files, Layers3, MessageSquareText, Sparkles } from "lucide-react";
+import { ArrowRight, Brush, Files, Layers3, MessageSquareText } from "lucide-react";
 
 import { MarketingPageShell } from "@/components/marketing/page-shell";
+import { ClientHubScene } from "@/components/three/ClientHubScene";
 import { Button } from "@/components/ui/button";
 import { portalStats, projects } from "@/data/clienthub";
 import { getCurrentLocale } from "@/lib/locale";
@@ -85,47 +86,7 @@ export default async function Home() {
               </div>
             </div>
 
-            <div className="clienthub-scene" aria-label={t.sceneLabel}>
-              <div className="clienthub-stage">
-                <div className="clienthub-gallery-wall">
-                  <div className="clienthub-wall-brand">
-                    <span>{t.sceneLabel}</span>
-                    <strong>Northline Studio</strong>
-                  </div>
-                  <div className="clienthub-wall-frame clienthub-wall-frame-a" />
-                  <div className="clienthub-wall-frame clienthub-wall-frame-b" />
-                  <div className="clienthub-wall-frame clienthub-wall-frame-c" />
-                </div>
-                <div className="clienthub-gallery-floor" />
-                <div className="clienthub-editorial-table">
-                  <div className="clienthub-table-glow" />
-                  <div className="clienthub-book clienthub-book-large">
-                    <span>Client brief</span>
-                    <strong>{projects[0]?.name}</strong>
-                    <small>{projects[0]?.progress}% reviewed</small>
-                  </div>
-                  <div className="clienthub-book clienthub-book-small">
-                    <Files className="size-6" />
-                    <span>Files</span>
-                  </div>
-                  <div className="clienthub-room-chip clienthub-room-chip-left">
-                    <CheckCircle2 className="size-5" />
-                    <span>Milestones</span>
-                  </div>
-                  <div className="clienthub-room-chip clienthub-room-chip-right">
-                    <Sparkles className="size-5" />
-                    <span>Review</span>
-                  </div>
-                </div>
-                <div className="clienthub-seat clienthub-seat-a" />
-                <div className="clienthub-seat clienthub-seat-b" />
-                <div className="clienthub-note-strip">
-                  {projects.slice(0, 3).map((project) => (
-                    <span key={project.slug}>{project.status}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <ClientHubScene />
           </div>
         </section>
 
