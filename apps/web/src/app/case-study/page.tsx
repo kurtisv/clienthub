@@ -8,27 +8,27 @@ import { getCurrentLocale } from "@/lib/locale";
 const copy = {
   fr: {
     eyebrow: "Etude de cas",
-    title: "ClientHub montre le cote portail client du boilerplate.",
-    intro: "Ce projet prouve qu'une meme base peut livrer un espace B2B protege qui rassemble les donnees de QuotePilot, ReserveFlow, CommerceKit, EventPass et SupportDesk.",
-    cta: "Explorer le portail",
+    title: "ClientHub devient une vitrine portfolio 3D pour une experience client premium.",
+    intro: "Le projet prouve qu'une meme base peut livrer un site vitrine moderne avec scene 3D CSS, composition editoriale, preuves de projets et navigation claire pour recruteur.",
+    cta: "Explorer la vitrine",
     points: [
-      "UX de portail protege prete pour Auth.js et Prisma.",
-      "Pages projet avec jalons, fichiers, messages et prochaines decisions.",
-      "Passerelles ecosysteme entre soumissions, rendez-vous, commandes, evenements et support.",
-      "Systeme visuel distinct des projets commerce, booking, API et marketing.",
+      "Hero 3D CSS avec cartes inclinees et profondeur visuelle.",
+      "Sections de preuve avec projets, progression, fichiers et jalons.",
+      "Positionnement vitrine moderne au lieu d'un dashboard generique.",
+      "Systeme visuel distinct des autres sites portfolio.",
       "Copie FR/EN et explication claire pour recruteur.",
     ],
   },
   en: {
     eyebrow: "Case study",
-    title: "ClientHub shows the client portal side of the boilerplate.",
-    intro: "This project proves that one foundation can deliver a protected B2B space that gathers data from QuotePilot, ReserveFlow, CommerceKit, EventPass, and SupportDesk.",
-    cta: "Explore portal",
+    title: "ClientHub becomes a 3D portfolio showcase for a premium client experience.",
+    intro: "The project proves one foundation can deliver a modern showcase site with a CSS 3D scene, editorial composition, project proof, and a clear recruiter path.",
+    cta: "Explore showcase",
     points: [
-      "Protected portal-ready UX built on Auth.js and Prisma foundations.",
-      "Project detail pages with milestones, files, messages, and next decisions.",
-      "Ecosystem handoffs that connect quotes, bookings, commerce orders, events, and support.",
-      "Distinct visual system from commerce, booking, API, and marketing projects.",
+      "CSS 3D hero with tilted cards and visual depth.",
+      "Proof sections with projects, progress, files, and milestones.",
+      "Modern showcase positioning instead of a generic dashboard.",
+      "Distinct visual system from the other portfolio sites.",
       "FR/EN public copy and recruiter-facing explanation.",
     ],
   },
@@ -55,7 +55,7 @@ export default async function CaseStudyPage() {
           ))}
         </div>
         <Button asChild>
-          <Link href="/portal">{t.cta}</Link>
+          <Link href="/#showcase">{t.cta}</Link>
         </Button>
       </main>
     </MarketingPageShell>

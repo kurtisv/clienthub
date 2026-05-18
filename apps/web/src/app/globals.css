@@ -56,3 +56,68 @@ body {
   border-color: rgba(39, 60, 87, 0.45);
   box-shadow: 0 16px 30px rgba(39, 60, 87, 0.11);
 }
+
+.clienthub-scene {
+  min-height: 520px;
+  perspective: 1200px;
+}
+
+.clienthub-stage {
+  position: relative;
+  height: 520px;
+  transform-style: preserve-3d;
+  transform: rotateX(58deg) rotateZ(-34deg);
+}
+
+.clienthub-panel {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: linear-gradient(145deg, rgba(39, 60, 87, 0.98), rgba(24, 33, 42, 0.96));
+  box-shadow: 0 34px 70px rgba(24, 33, 42, 0.24);
+  transform-style: preserve-3d;
+}
+
+.clienthub-panel::after {
+  content: "";
+  position: absolute;
+  inset: auto 18px -18px 18px;
+  height: 18px;
+  background: rgba(24, 33, 42, 0.36);
+  filter: blur(12px);
+}
+
+.clienthub-panel-main {
+  inset: 70px 76px 70px 76px;
+  padding: 24px;
+  transform: translateZ(70px);
+}
+
+.clienthub-panel-left {
+  left: 0;
+  top: 176px;
+  width: 170px;
+  min-height: 180px;
+  padding: 20px;
+  transform: translateZ(128px) rotateZ(8deg);
+}
+
+.clienthub-panel-right {
+  right: 0;
+  top: 34px;
+  width: 180px;
+  min-height: 190px;
+  padding: 20px;
+  transform: translateZ(118px) rotateZ(-7deg);
+}
+
+@media (max-width: 768px) {
+  .clienthub-scene {
+    min-height: 420px;
+  }
+
+  .clienthub-stage {
+    height: 420px;
+    transform: rotateX(58deg) rotateZ(-29deg) scale(0.72);
+    transform-origin: center;
+  }
+}
