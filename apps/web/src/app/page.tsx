@@ -87,12 +87,24 @@ export default async function Home() {
 
             <div className="clienthub-scene" aria-label={t.sceneLabel}>
               <div className="clienthub-stage">
-                <div className="clienthub-panel clienthub-panel-main">
+                <div className="clienthub-room-floor" />
+                <div className="clienthub-room-back">
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/48">{t.sceneLabel}</p>
+                  <p className="mt-2 text-3xl font-semibold text-white">Northline Studio</p>
+                </div>
+                <div className="clienthub-room-left">
+                  <p className="text-xs uppercase tracking-[0.16em] text-white/55">Files</p>
+                  <Files className="mt-6 size-9 text-[#f4d8c9]" />
+                  <p className="mt-4 text-sm text-white/70">Assets, notes, proof</p>
+                </div>
+                <div className="clienthub-room-right">
+                  <p className="text-xs uppercase tracking-[0.16em] text-white/55">Milestones</p>
+                  <CheckCircle2 className="mt-6 size-9 text-[#dbe7d3]" />
+                  <p className="mt-4 text-sm text-white/70">Decisions, progress, launch</p>
+                </div>
+                <div className="clienthub-desk">
                   <div className="flex items-center justify-between border-b border-white/15 pb-4">
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/60">{t.sceneLabel}</p>
-                      <p className="mt-1 text-2xl font-semibold text-white">Northline Studio</p>
-                    </div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/60">Client room</p>
                     <Sparkles className="size-7 text-[#f4d8c9]" />
                   </div>
                   <div className="mt-5 grid gap-4">
@@ -111,16 +123,6 @@ export default async function Home() {
                       </div>
                     ))}
                   </div>
-                </div>
-                <div className="clienthub-panel clienthub-panel-left">
-                  <p className="text-xs uppercase tracking-[0.16em] text-white/55">Files</p>
-                  <Files className="mt-6 size-9 text-[#f4d8c9]" />
-                  <p className="mt-4 text-sm text-white/70">Assets, notes, proof</p>
-                </div>
-                <div className="clienthub-panel clienthub-panel-right">
-                  <p className="text-xs uppercase tracking-[0.16em] text-white/55">Milestones</p>
-                  <CheckCircle2 className="mt-6 size-9 text-[#dbe7d3]" />
-                  <p className="mt-4 text-sm text-white/70">Decisions, progress, launch</p>
                 </div>
               </div>
             </div>

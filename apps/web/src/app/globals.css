@@ -69,7 +69,11 @@ body {
   transform: rotateX(58deg) rotateZ(-34deg);
 }
 
-.clienthub-panel {
+.clienthub-desk,
+.clienthub-room-back,
+.clienthub-room-left,
+.clienthub-room-right,
+.clienthub-room-floor {
   position: absolute;
   border: 1px solid rgba(255, 255, 255, 0.16);
   background: linear-gradient(145deg, rgba(39, 60, 87, 0.98), rgba(24, 33, 42, 0.96));
@@ -77,7 +81,9 @@ body {
   transform-style: preserve-3d;
 }
 
-.clienthub-panel::after {
+.clienthub-desk::after,
+.clienthub-room-left::after,
+.clienthub-room-right::after {
   content: "";
   position: absolute;
   inset: auto 18px -18px 18px;
@@ -86,28 +92,50 @@ body {
   filter: blur(12px);
 }
 
-.clienthub-panel-main {
-  inset: 70px 76px 70px 76px;
+.clienthub-room-floor {
+  left: 78px;
+  right: 78px;
+  bottom: 18px;
+  height: 330px;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(145deg, rgba(24, 33, 42, 0.92), rgba(39, 60, 87, 0.88));
+  background-size: 42px 42px, 42px 42px, auto;
+  transform: rotateX(90deg) translateZ(-108px);
+}
+
+.clienthub-room-back {
+  left: 112px;
+  right: 112px;
+  top: 42px;
+  min-height: 170px;
+  padding: 28px;
+  transform: translateZ(18px) rotateX(-68deg);
+}
+
+.clienthub-desk {
+  inset: 148px 104px 84px 104px;
   padding: 24px;
-  transform: translateZ(70px);
+  transform: translateZ(128px);
 }
 
-.clienthub-panel-left {
+.clienthub-room-left {
   left: 0;
-  top: 176px;
+  top: 164px;
   width: 170px;
-  min-height: 180px;
+  min-height: 210px;
   padding: 20px;
-  transform: translateZ(128px) rotateZ(8deg);
+  transform: translateZ(96px) rotateY(58deg) rotateZ(3deg);
 }
 
-.clienthub-panel-right {
+.clienthub-room-right {
   right: 0;
-  top: 34px;
+  top: 126px;
   width: 180px;
-  min-height: 190px;
+  min-height: 220px;
   padding: 20px;
-  transform: translateZ(118px) rotateZ(-7deg);
+  transform: translateZ(106px) rotateY(-58deg) rotateZ(-3deg);
 }
 
 @media (max-width: 768px) {
