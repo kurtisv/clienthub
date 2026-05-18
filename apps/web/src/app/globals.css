@@ -66,76 +66,208 @@ body {
   position: relative;
   height: 520px;
   transform-style: preserve-3d;
-  transform: rotateX(58deg) rotateZ(-34deg);
+  transform: rotateX(64deg) rotateZ(-42deg);
 }
 
-.clienthub-desk,
-.clienthub-room-back,
-.clienthub-room-left,
-.clienthub-room-right,
-.clienthub-room-floor {
+.clienthub-gallery-wall,
+.clienthub-gallery-floor,
+.clienthub-editorial-table,
+.clienthub-book,
+.clienthub-room-chip,
+.clienthub-seat,
+.clienthub-note-strip {
   position: absolute;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  background: linear-gradient(145deg, rgba(39, 60, 87, 0.98), rgba(24, 33, 42, 0.96));
-  box-shadow: 0 34px 70px rgba(24, 33, 42, 0.24);
   transform-style: preserve-3d;
 }
 
-.clienthub-desk::after,
-.clienthub-room-left::after,
-.clienthub-room-right::after {
-  content: "";
-  position: absolute;
-  inset: auto 18px -18px 18px;
-  height: 18px;
-  background: rgba(24, 33, 42, 0.36);
-  filter: blur(12px);
-}
-
-.clienthub-room-floor {
-  left: 78px;
-  right: 78px;
-  bottom: 18px;
-  height: 330px;
+.clienthub-gallery-floor {
+  left: 40px;
+  right: 40px;
+  bottom: 12px;
+  height: 390px;
+  border: 1px solid rgba(39, 60, 87, 0.18);
   background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(145deg, rgba(24, 33, 42, 0.92), rgba(39, 60, 87, 0.88));
-  background-size: 42px 42px, 42px 42px, auto;
-  transform: rotateX(90deg) translateZ(-108px);
+    linear-gradient(90deg, rgba(255, 255, 255, 0.18) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.16) 1px, transparent 1px),
+    linear-gradient(135deg, #f7efe5, #dbe7d3 58%, #b8c7c7);
+  background-size: 58px 58px, 58px 58px, auto;
+  box-shadow: 0 42px 70px rgba(24, 33, 42, 0.16);
+  transform: rotateX(90deg) translateZ(-132px);
 }
 
-.clienthub-room-back {
-  left: 112px;
-  right: 112px;
-  top: 42px;
-  min-height: 170px;
-  padding: 28px;
-  transform: translateZ(18px) rotateX(-68deg);
+.clienthub-gallery-wall {
+  left: 82px;
+  right: 82px;
+  top: 28px;
+  height: 238px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background:
+    linear-gradient(135deg, rgba(39, 60, 87, 0.98), rgba(24, 33, 42, 0.96)),
+    linear-gradient(90deg, rgba(244, 216, 201, 0.2), transparent);
+  box-shadow: 0 32px 66px rgba(24, 33, 42, 0.22);
+  transform: translateZ(12px) rotateX(-68deg);
 }
 
-.clienthub-desk {
-  inset: 148px 104px 84px 104px;
-  padding: 24px;
-  transform: translateZ(128px);
+.clienthub-wall-brand {
+  position: absolute;
+  left: 28px;
+  top: 26px;
+  display: grid;
+  gap: 8px;
+  color: white;
 }
 
-.clienthub-room-left {
-  left: 0;
+.clienthub-wall-brand span,
+.clienthub-book span,
+.clienthub-room-chip span,
+.clienthub-note-strip span {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.clienthub-wall-brand strong {
+  font-size: 2rem;
+}
+
+.clienthub-wall-frame {
+  position: absolute;
+  right: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: linear-gradient(135deg, rgba(244, 216, 201, 0.85), rgba(219, 231, 211, 0.78));
+}
+
+.clienthub-wall-frame-a {
+  top: 28px;
+  width: 94px;
+  height: 122px;
+}
+
+.clienthub-wall-frame-b {
+  right: 142px;
+  top: 62px;
+  width: 118px;
+  height: 84px;
+}
+
+.clienthub-wall-frame-c {
+  right: 76px;
   top: 164px;
-  width: 170px;
-  min-height: 210px;
-  padding: 20px;
-  transform: translateZ(96px) rotateY(58deg) rotateZ(3deg);
+  width: 160px;
+  height: 28px;
 }
 
-.clienthub-room-right {
-  right: 0;
-  top: 126px;
-  width: 180px;
-  min-height: 220px;
+.clienthub-editorial-table {
+  left: 136px;
+  right: 120px;
+  bottom: 82px;
+  height: 250px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(39, 60, 87, 0.98), rgba(24, 33, 42, 0.94));
+  box-shadow: 0 34px 70px rgba(24, 33, 42, 0.24);
+  transform: translateZ(96px);
+}
+
+.clienthub-table-glow {
+  position: absolute;
+  inset: 22px;
+  border-radius: 22px;
+  background: radial-gradient(circle at 42% 42%, rgba(244, 216, 201, 0.2), transparent 58%);
+}
+
+.clienthub-book {
+  display: grid;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
+  box-shadow: 0 20px 36px rgba(0, 0, 0, 0.18);
+}
+
+.clienthub-book-large {
+  left: 42px;
+  top: 44px;
+  width: 220px;
+  min-height: 146px;
+  gap: 12px;
   padding: 20px;
-  transform: translateZ(106px) rotateY(-58deg) rotateZ(-3deg);
+  transform: translateZ(58px) rotateZ(-7deg);
+}
+
+.clienthub-book-large strong {
+  font-size: 1.35rem;
+}
+
+.clienthub-book-large small {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.clienthub-book-small {
+  right: 42px;
+  top: 56px;
+  width: 118px;
+  min-height: 118px;
+  place-items: center;
+  color: #f4d8c9;
+  transform: translateZ(72px) rotateZ(10deg);
+}
+
+.clienthub-room-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  background: #fffefa;
+  color: #273c57;
+  padding: 12px 16px;
+  box-shadow: 0 18px 32px rgba(24, 33, 42, 0.18);
+}
+
+.clienthub-room-chip-left {
+  left: 52px;
+  bottom: 22px;
+  transform: translateZ(92px);
+}
+
+.clienthub-room-chip-right {
+  right: 38px;
+  bottom: 28px;
+  transform: translateZ(104px);
+}
+
+.clienthub-seat {
+  width: 82px;
+  height: 82px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 34% 28%, #f4d8c9, #b95738 66%, #273c57);
+  box-shadow: 0 22px 42px rgba(24, 33, 42, 0.2);
+}
+
+.clienthub-seat-a {
+  left: 68px;
+  bottom: 78px;
+  transform: translateZ(52px);
+}
+
+.clienthub-seat-b {
+  right: 42px;
+  bottom: 196px;
+  transform: translateZ(58px);
+}
+
+.clienthub-note-strip {
+  left: 236px;
+  bottom: 18px;
+  display: flex;
+  gap: 10px;
+  transform: translateZ(76px);
+}
+
+.clienthub-note-strip span {
+  background: rgba(255, 254, 250, 0.9);
+  color: #273c57;
+  padding: 8px 10px;
+  box-shadow: 0 16px 26px rgba(24, 33, 42, 0.14);
 }
 
 @media (max-width: 768px) {
@@ -145,7 +277,7 @@ body {
 
   .clienthub-stage {
     height: 420px;
-    transform: rotateX(58deg) rotateZ(-29deg) scale(0.72);
+    transform: rotateX(64deg) rotateZ(-38deg) scale(0.72);
     transform-origin: center;
   }
 }

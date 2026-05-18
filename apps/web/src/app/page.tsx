@@ -87,42 +87,42 @@ export default async function Home() {
 
             <div className="clienthub-scene" aria-label={t.sceneLabel}>
               <div className="clienthub-stage">
-                <div className="clienthub-room-floor" />
-                <div className="clienthub-room-back">
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/48">{t.sceneLabel}</p>
-                  <p className="mt-2 text-3xl font-semibold text-white">Northline Studio</p>
-                </div>
-                <div className="clienthub-room-left">
-                  <p className="text-xs uppercase tracking-[0.16em] text-white/55">Files</p>
-                  <Files className="mt-6 size-9 text-[#f4d8c9]" />
-                  <p className="mt-4 text-sm text-white/70">Assets, notes, proof</p>
-                </div>
-                <div className="clienthub-room-right">
-                  <p className="text-xs uppercase tracking-[0.16em] text-white/55">Milestones</p>
-                  <CheckCircle2 className="mt-6 size-9 text-[#dbe7d3]" />
-                  <p className="mt-4 text-sm text-white/70">Decisions, progress, launch</p>
-                </div>
-                <div className="clienthub-desk">
-                  <div className="flex items-center justify-between border-b border-white/15 pb-4">
-                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/60">Client room</p>
-                    <Sparkles className="size-7 text-[#f4d8c9]" />
+                <div className="clienthub-gallery-wall">
+                  <div className="clienthub-wall-brand">
+                    <span>{t.sceneLabel}</span>
+                    <strong>Northline Studio</strong>
                   </div>
-                  <div className="mt-5 grid gap-4">
-                    {projects.slice(0, 2).map((project) => (
-                      <div key={project.slug} className="rounded-xl border border-white/15 bg-white/[0.08] p-4 text-white">
-                        <div className="flex items-start justify-between gap-4">
-                          <div>
-                            <p className="font-semibold">{project.name}</p>
-                            <p className="mt-1 text-sm text-white/58">{project.nextStep}</p>
-                          </div>
-                          <p className="rounded-full bg-white/10 px-2 py-1 text-xs">{project.status}</p>
-                        </div>
-                        <div className="mt-4 h-2 rounded-full bg-white/10">
-                          <div className="h-2 rounded-full bg-[#f4d8c9]" style={{ width: `${project.progress}%` }} />
-                        </div>
-                      </div>
-                    ))}
+                  <div className="clienthub-wall-frame clienthub-wall-frame-a" />
+                  <div className="clienthub-wall-frame clienthub-wall-frame-b" />
+                  <div className="clienthub-wall-frame clienthub-wall-frame-c" />
+                </div>
+                <div className="clienthub-gallery-floor" />
+                <div className="clienthub-editorial-table">
+                  <div className="clienthub-table-glow" />
+                  <div className="clienthub-book clienthub-book-large">
+                    <span>Client brief</span>
+                    <strong>{projects[0]?.name}</strong>
+                    <small>{projects[0]?.progress}% reviewed</small>
                   </div>
+                  <div className="clienthub-book clienthub-book-small">
+                    <Files className="size-6" />
+                    <span>Files</span>
+                  </div>
+                  <div className="clienthub-room-chip clienthub-room-chip-left">
+                    <CheckCircle2 className="size-5" />
+                    <span>Milestones</span>
+                  </div>
+                  <div className="clienthub-room-chip clienthub-room-chip-right">
+                    <Sparkles className="size-5" />
+                    <span>Review</span>
+                  </div>
+                </div>
+                <div className="clienthub-seat clienthub-seat-a" />
+                <div className="clienthub-seat clienthub-seat-b" />
+                <div className="clienthub-note-strip">
+                  {projects.slice(0, 3).map((project) => (
+                    <span key={project.slug}>{project.status}</span>
+                  ))}
                 </div>
               </div>
             </div>
